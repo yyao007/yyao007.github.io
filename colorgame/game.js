@@ -18,13 +18,17 @@ var defaultBackground = "rgb(66, 117, 183)"
 var currLevel = "hard";
 newGame(currLevel);
 
+function randInt(n) {
+	return Math.floor(Math.random() * n + 1);
+}
+
 function newGame(button) {
 	var n = level[button];
 	tiles = [];
 	for (var i = 0; i < n; ++i) {
-		var r = Math.floor(Math.random() * 255);
-		var g = Math.floor(Math.random() * 255);
-		var b = Math.floor(Math.random() * 255);
+		var r = randInt(255);
+		var g = randInt(255);
+		var b = randInt(255);
 		var color = "rgb(" + r + ", " + g + ", " + b + ")";
 		tiles.push(color);
 	}
@@ -35,7 +39,7 @@ function newGame(button) {
 	});
 	title.style.backgroundColor = defaultBackground;
 
-	var index = Math.floor(Math.random() * (n-1));
+	var index = randInt(n-1);
 	answer = tiles[index];
 	// $("h1").animate({'opacity': .3}, 200, function () {
 	// 	$(this).text(answer);

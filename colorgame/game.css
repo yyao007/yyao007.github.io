@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background: rgba(0, 0, 0, .9);
+    background: #232323 /*rgba(0, 0, 0, .9)*/;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
