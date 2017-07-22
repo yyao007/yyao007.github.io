@@ -31,13 +31,18 @@ function newGame(button) {
 
 	tiles.forEach(function (t, i) {
 		tilesDisplay[i].disabled = false;
-		tilesDisplay[i].style.background = t
+		tilesDisplay[i].style.backgroundColor = t
 	});
-	title.style.background = defaultBackground;
+	title.style.backgroundColor = defaultBackground;
 
 	var index = Math.floor(Math.random() * (n-1));
 	answer = tiles[index];
-	h1.textContent = answer;
+	// $("h1").animate({'opacity': .3}, 200, function () {
+	// 	$(this).text(answer);
+	// }).animate({'opacity': 1}, 350);
+	$("h1").fadeOut(300, function() {
+		$(this).text(answer).fadeIn(400);
+	});
 	btnNew.textContent = "New Color";
 	hint.textContent = "";
 }
@@ -61,7 +66,7 @@ btnEasy.addEventListener("click", function () {
 		this.classList.add("btn-active");
 		btnHard.classList.remove("btn-active");
 		for (var i = 3; i < tilesDisplay.length; ++i) {
-			tilesDisplay[i].style.background = "rgba(0, 0, 0, 0)";
+			tilesDisplay[i].style.backgroundColor = "rgba(0, 0, 0, 0)";
 			tilesDisplay[i].disabled = true;
 		}
 	}
@@ -70,20 +75,24 @@ btnEasy.addEventListener("click", function () {
 
 for (var i = 0; i < tilesDisplay.length; ++i) {
 	tilesDisplay[i].addEventListener("click", function () {
-		var color = this.style.background;
+		var color = this.style.backgroundColor;
 		if (color === answer) {
-			title.style.background = color;
+			title.style.backgroundColor = color;
 			for (var i = 0; i < tiles.length; ++i) {
-				tilesDisplay[i].style.background = color;
+				tilesDisplay[i].style.backgroundColor = color;
 				tilesDisplay[i].disabled = true;
 			}
-			hint.textContent = "Correct!";
+			$("#hint").fadeOut(200, function() {
+				$(this).text("Correct!").fadeIn(300);
+			});
 			btnNew.textContent = "Play again?"
 		}
 		else {
-			this.style.background = "rgba(0, 0, 0, 0)";
+			this.style.backgroundColor = "rgba(0, 0, 0, 0)";
 			this.disabled = true;
-			hint.textContent = "Try Again";
+			$("#hint").fadeOut(200, function() {
+				$(this).text("Try Again").fadeIn(300);
+			});
 		}
 		tiles[i] = "";
 	})
