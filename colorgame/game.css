@@ -2,6 +2,9 @@ body {
     text-align: center;
     background: rgba(0, 0, 0, .9);
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .title {
@@ -14,16 +17,10 @@ body {
     margin-bottom: 50px;
 }
 
-/*.row {*/
-    /*!*max-width: 500px;*!*/
-    /*width: 80%;*/
-/*}*/
-
-hr {
-    margin: 0;
-    border-top: 2px solid rgba(0, 0, 0, .2);
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+#hint {
+    text-transform: none;
 }
+
 
 .container-fluid {
     border: 1px solid rgba(0, 0, 0, .1);
@@ -36,13 +33,13 @@ hr {
     /*min-height: 10em;*/
     width: 150px;
     height: 150px;
-    background: rgba(0, 0, 0, 0);
     float: none;
+    background: rgba(0, 0, 0, 0);
     display: inline-block;
     border-radius: 20px;
     border: none;
+    transition: .5s ease;
 }
-
 
 button {
     outline: none;
@@ -51,10 +48,11 @@ button {
 
 .btn-control {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 900;
+    letter-spacing: 1px;
     color: rgb(66, 117, 183);
     text-transform: uppercase;
-    transition: .4s ease;
+    transition: .5s ease;
 }
 
 .btn-control:hover {
@@ -71,18 +69,27 @@ button {
     border: none;
     padding-top: 0;
     padding-bottom: 0;
+    transition: .5s ease;
 }
 
 #hint {
     margin: 0;
-    padding-top: 3px;
+    padding-top: 0;
+    /*font-family: "Roboto", sans-serif;*/
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: none;
 }
 
 h1 {
+    font-family: 'Quantico', sans-serif;
     font-size: 4em;
+    font-weight: 900;
 }
 
 h3 {
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 2.5em;
+    font-weight: 400;
 }
 
