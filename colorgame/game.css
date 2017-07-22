@@ -1,0 +1,88 @@
+body {
+    text-align: center;
+    background: rgba(0, 0, 0, .9);
+    text-transform: uppercase;
+}
+
+.title {
+    background: rgb(66, 117, 183);
+    color: white;
+}
+
+.buttons {
+    background: white;
+    margin-bottom: 50px;
+}
+
+/*.row {*/
+    /*!*max-width: 500px;*!*/
+    /*width: 80%;*/
+/*}*/
+
+hr {
+    margin: 0;
+    border-top: 2px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.container-fluid {
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.tile {
+    /*max-width: 20em;*/
+    /*min-width: 10em;*/
+    /*max-height: 20em;*/
+    /*min-height: 10em;*/
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0);
+    float: none;
+    display: inline-block;
+    border-radius: 20px;
+    border: none;
+}
+
+
+button {
+    outline: none;
+    border: none;
+}
+
+.btn-control {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(66, 117, 183);
+    text-transform: uppercase;
+    transition: .4s ease;
+}
+
+.btn-control:hover {
+    background: rgb(66, 117, 183);
+    color: white;
+}
+
+.btn-active {
+    background: rgb(66, 117, 183);
+    color: white;
+}
+
+.container, .container-fluid {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#hint {
+    margin: 0;
+    padding-top: 3px;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h3 {
+    font-size: 2.5em;
+}
+
