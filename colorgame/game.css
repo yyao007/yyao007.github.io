@@ -84,6 +84,8 @@ body {
     border-radius: 20px;
     border: none;
     transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
 }
 
 button {
@@ -92,21 +94,23 @@ button {
 }
 
 .btn-control {
-    font-size: 16px;
+    font-size: inherit;
     font-weight: 900;
     letter-spacing: 1px;
     color: rgb(66, 117, 183);
     text-transform: uppercase;
-    transition: .5s ease;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
 }
 
 .btn-control:hover {
-    background: rgb(66, 117, 183);
+    background: steelblue;
     color: white;
 }
 
 .btn-active {
-    background: rgb(66, 117, 183);
+    background: steelblue;
     color: white;
 }
 
@@ -115,6 +119,8 @@ button {
     padding-top: 0;
     padding-bottom: 0;
     transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
 }
 
 #hint {
@@ -122,7 +128,7 @@ button {
     padding-top: 0;
     /*font-family: "Roboto", sans-serif;*/
     font-weight: 400;
-    font-size: 16px;
+    font-size: inherit;
     letter-spacing: none;
 }
 
@@ -130,6 +136,7 @@ h1 {
     font-family: 'Quantico', sans-serif;
     font-size: 4em;
     font-weight: 900;
+    margin: 3px 0;
 }
 
 h3 {
@@ -138,3 +145,12 @@ h3 {
     font-weight: 400;
 }
 
+.top {
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+
+.bottom {
+    margin-top: 2px;
+    margin-bottom: 20px;
+}

@@ -14,7 +14,7 @@ level = {
 
 var tiles = [];
 var answer;
-var defaultBackground = "rgb(66, 117, 183)"
+var defaultBackground = "steelblue"
 var currLevel = "hard";
 newGame(currLevel);
 
@@ -33,10 +33,18 @@ function newGame(button) {
 		tiles.push(color);
 	}
 
-	tiles.forEach(function (t, i) {
-		tilesDisplay[i].disabled = false;
-		tilesDisplay[i].style.backgroundColor = t
-	});
+	for (var i = 0; i < tilesDisplay.length; ++i) {
+		if (tiles[i]) {
+			tilesDisplay[i].disabled = false;
+			// tilesDisplay[i].style.display = "block";
+			tilesDisplay[i].style.backgroundColor = tiles[i];
+		} else {
+			tilesDisplay[i].style.backgroundColor = "rgba(0, 0, 0, 0)";
+			// tilesDisplay[i].style.display = "none";
+			tilesDisplay[i].disabled = true;
+		}
+	}
+
 	title.style.backgroundColor = defaultBackground;
 
 	var index = randInt(n-1);
@@ -44,8 +52,8 @@ function newGame(button) {
 	// $("h1").animate({'opacity': .3}, 200, function () {
 	// 	$(this).text(answer);
 	// }).animate({'opacity': 1}, 350);
-	$("h1").fadeOut(300, function() {
-		$(this).text(answer).fadeIn(400);
+	$("h1").fadeOut(200, function() {
+		$(this).text(answer).fadeIn(300);
 	});
 	btnNew.textContent = "New Color";
 	hint.textContent = "";
@@ -69,10 +77,6 @@ btnEasy.addEventListener("click", function () {
 		currLevel = "easy";
 		this.classList.add("btn-active");
 		btnHard.classList.remove("btn-active");
-		for (var i = 3; i < tilesDisplay.length; ++i) {
-			tilesDisplay[i].style.backgroundColor = "rgba(0, 0, 0, 0)";
-			tilesDisplay[i].disabled = true;
-		}
 	}
 	newGame(currLevel);
 });
@@ -94,8 +98,8 @@ for (var i = 0; i < tilesDisplay.length; ++i) {
 		else {
 			this.style.backgroundColor = "rgba(0, 0, 0, 0)";
 			this.disabled = true;
-			$("#hint").fadeOut(200, function() {
-				$(this).text("Try Again").fadeIn(300);
+			$("#hint").fadeOut(100, function() {
+				$(this).text("Try Again").fadeIn(200);
 			});
 		}
 		tiles[i] = "";
