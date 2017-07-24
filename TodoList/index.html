@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quantico:700|Average+Sans|Bubblegum+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/todo.css" type="text/css">
+
+    <script type="text/javascript" src="assets/js/lib/jquery-3.2.1.min.js"></script>
+    <title>Todo List</title>
+</head>
+<body>
+<div id="container">
+    <table>
+        <tbody>
+            <tr>
+                <th id="head">
+                    To-do List
+                    <span id="add"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                </th>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td id="input">
+                    <div id="input-container" class="row-container">
+                        <input type="text" placeholder="Add New Todo">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="list">
+            <tr>
+                <td class="row-container">
+                    <div class="todo">
+                        <span class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>Buy Books
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="row-container">
+                    <div class="todo">
+                        <span class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></span>Wash hands
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script type="text/javascript" src="assets/js/todo.js"></script>
+</body>
+</html>
